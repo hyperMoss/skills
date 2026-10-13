@@ -1,0 +1,23 @@
+# OMP registry schema v0.1
+
+Skill:
+  required:
+    - name
+    - type
+    - path
+
+Types:
+  execution-mode:
+    entry:
+      - mode.yaml
+
+  workflow-adapter:
+    entry:
+      - playbooks
+
+  orchestration-skill:
+    entry:
+      - workflows
+
+Lifecycle:
+  discover -> load -> resolve -> execute -> verify
