@@ -1,0 +1,17 @@
+name: planner
+
+type: reasoning-agent
+
+capabilities:
+  - task-decomposition
+  - workflow-selection
+
+inputs:
+  - task
+  - context
+
+outputs:
+  - execution-plan
+
+constraints:
+  - do-not-modify-user-artifacts
