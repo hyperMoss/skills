@@ -1,0 +1,20 @@
+roles:
+  planner:
+    purpose: decompose goals and create execution plans
+    omp_agent: planner
+
+  scout:
+    purpose: inspect repositories and gather context
+    omp_agent: scout
+
+  implementer:
+    purpose: execute scoped changes
+    omp_agent: worker
+
+  reviewer:
+    purpose: validate quality and correctness
+    omp_agent: reviewer
+
+  verifier:
+    purpose: run acceptance checks
+    omp_agent: verifier
