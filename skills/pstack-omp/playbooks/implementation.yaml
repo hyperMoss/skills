@@ -1,0 +1,21 @@
+name: implementation
+
+type: pstack-playbook
+version: 0.1
+
+roles:
+  - planner
+  - implementer
+  - reviewer
+  - verifier
+
+lifecycle:
+  - understand
+  - design
+  - implement
+  - review
+  - verify
+
+handoff:
+  require_acceptance: true
+  root_controls_merge: true
