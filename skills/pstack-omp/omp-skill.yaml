@@ -1,0 +1,22 @@
+name: pstack-omp
+version: 0.1.0
+schema: omp.skill.v1
+
+type: workflow-adapter
+
+summary: Convert pstack multi-agent workflows into OMP-native workflows.
+
+provides:
+  - workflow-routing
+  - agent-role-mapping
+  - lifecycle-management
+  - playbook-execution
+
+requires:
+  - orchestrate-omp
+
+entrypoints:
+  workflow:
+    path: playbooks/
+  roles:
+    path: roles/
