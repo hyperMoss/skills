@@ -1,0 +1,14 @@
+name: arena
+version: 0.1.0
+
+type: evaluation-pattern
+
+stages:
+  - candidate-generation
+  - independent-review
+  - comparison
+  - winner-selection
+
+output:
+  decision: required
+  rationale: required
