@@ -1,0 +1,20 @@
+name: task-result
+
+fields:
+  id:
+    type: string
+
+  status:
+    enum:
+      - completed
+      - failed
+      - blocked
+
+  artifacts:
+    type: list
+
+  verification:
+    type: object
+
+  unresolved:
+    type: list
