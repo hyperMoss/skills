@@ -1,0 +1,25 @@
+name: parallel-research
+
+type: workflow
+version: 0.1
+
+purpose: parallel discovery and specialist analysis
+
+stages:
+  - id: scout
+    role: discovery
+    parallel: true
+
+  - id: specialist-review
+    role: review
+    parallel: true
+
+  - id: integrate
+    role: coordinator
+    depends_on:
+      - scout
+      - specialist-review
+
+policies:
+  root_owns_final_verification: true
+  children_do_not_delegate: true
