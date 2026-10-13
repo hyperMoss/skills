@@ -1,0 +1,15 @@
+name: swarm
+version: 0.1.0
+
+type: workflow-pattern
+
+stages:
+  - discover
+  - parallel-execute
+  - aggregate
+  - verify
+
+execution:
+  strategy: parallel
+  shared_context: true
+  ownership: explicit
