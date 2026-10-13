@@ -1,0 +1,44 @@
+# OMP Skill Schema v1
+# pstack compatible skill manifest
+
+apiVersion: omp/v1
+
+kind: Skill
+
+metadata:
+  name: string
+  version: string
+  description: optional
+  tags: []
+
+spec:
+  type: skill | mode | workflow | agent | orchestration
+
+  trigger:
+    commands: []
+    keywords: []
+    intents: []
+
+  runtime:
+    executor: workflow-engine
+    context:
+      project: true
+      git: true
+      memory: true
+
+  workflow:
+    steps:
+      - id: string
+        type: agent | skill | action
+        target: string
+        dependsOn: []
+
+  agents:
+    - name: string
+      role: string
+      model: optional
+
+  memory:
+    read: []
+    write: []
+    strategy: append | merge | learn
