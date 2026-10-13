@@ -1,0 +1,23 @@
+# OMP Skill Registry v0.1
+
+version: 0.1
+
+skills:
+  - name: poteto-mode
+    type: execution-mode
+    path: skills/poteto-mode
+    entry: mode.yaml
+
+  - name: pstack-omp
+    type: workflow-adapter
+    path: skills/pstack-omp
+    entry: playbooks/
+
+  - name: orchestrate-omp
+    type: orchestration-skill
+    path: skills/orchestrate-omp
+    entry: workflows/
+
+resolution:
+  case_sensitive: true
+  namespace: skill
