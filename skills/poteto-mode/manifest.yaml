@@ -1,0 +1,11 @@
+name: poteto-mode
+version: 0.1.0
+type: execution-mode
+authoring: omp
+
+provides:
+  - autonomous-planning
+  - playbook-routing
+  - checkpoint-policy
+
+entrypoint: SKILL.md
