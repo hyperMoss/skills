@@ -1,0 +1,35 @@
+features:
+  poteto-mode:
+    type: execution-mode
+    entry: ../poteto-mode
+
+  orchestrate:
+    type: orchestration
+    entry: ../orchestrate-omp
+
+  swarm:
+    type: coordination-pattern
+    behavior:
+      - parallel-agents
+      - shared-context
+      - result-aggregation
+
+  arena:
+    type: evaluation-pattern
+    behavior:
+      - competing-solutions
+      - comparison
+      - selection
+
+  reflect:
+    type: reasoning-loop
+    behavior:
+      - self-review
+      - plan-improvement
+
+  correct:
+    type: recovery-loop
+    behavior:
+      - error-analysis
+      - retry
+      - correction
