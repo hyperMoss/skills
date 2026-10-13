@@ -1,0 +1,16 @@
+name: poteto-router
+
+mode: poteto-mode
+
+routes:
+  implementation:
+    workflow: pstack-omp/playbooks/implementation.yaml
+    orchestrator: orchestrate-omp
+
+  research:
+    workflow: orchestrate-omp/workflows/parallel-research.yaml
+    orchestrator: orchestrate-omp
+
+policy:
+  keep_root_ownership: true
+  require_verification: true
