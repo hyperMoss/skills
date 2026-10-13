@@ -1,0 +1,17 @@
+name: orchestrate-omp
+version: 0.1.0
+type: orchestration-skill
+runtime: omp
+
+provides:
+  - task-decomposition
+  - multi-agent-coordination
+  - workflow-execution
+  - verification-loop
+
+requires:
+  - task
+  - agent
+  - workflow
+
+entrypoint: SKILL.md
